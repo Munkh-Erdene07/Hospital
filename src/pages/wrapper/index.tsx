@@ -1,3 +1,8 @@
+import Caruosel from "../../components/caruosel/Caruosel";
 export default function MainPage() {
-  return <div></div>;
+  return (
+    <main>
+      <Caruosel />
+    </main>
+  );
 }

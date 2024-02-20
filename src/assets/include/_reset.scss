@@ -8,6 +8,10 @@ $main_color_hover: #00a2ae;
   list-style: none;
   font-family: "Roboto Condensed", sans-serif;
   text-decoration: none;
+  button {
+    outline: none;
+    border: 0;
+  }
 }
 .wfull {
   width: 100%;
