@@ -1,0 +1,91 @@
+.Header {
+  @include size(100%, 89px);
+  padding: 0 30px;
+  @include flex;
+  background: #f1f7f7;
+  .logo {
+    width: 12%;
+    object-fit: contain;
+  }
+  .navigation {
+    @include size(950px, 100%);
+    @include flex;
+    .navigationItem {
+      @include flex;
+      li {
+        margin: 0 12px;
+        cursor: pointer;
+        a {
+          color: $main_color;
+          font-weight: bold;
+        }
+        &:hover {
+          .navigationDetails {
+            transform: translateY(0);
+            transition: ease 0.3s;
+            opacity: 1;
+          }
+        }
+        .navigationDetails {
+          @include size(300px, auto);
+          position: absolute;
+          background: white;
+          padding: 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 12px -4px;
+          transform: translateY(-200%);
+          opacity: 0;
+          // transition: ease-in-out 0.2s;
+          .w12 {
+            &:hover {
+              a,
+              .water {
+                color: $main_color_hover;
+                transition: all 0.3s;
+              }
+            }
+            color: $main_color;
+            transition: all 0.3s;
+            .water {
+              margin-right: 5px;
+            }
+            margin: 12px 0;
+          }
+        }
+      }
+    }
+    .icon_con {
+      display: flex;
+      .iconItem {
+        margin: 0 8px;
+        @include size(40px, 40px);
+        background: #d6e9e9;
+        border-radius: 50%;
+        @include centerlize(center);
+        color: #757575;
+        cursor: pointer;
+        &:hover {
+          background: #00b0bd;
+          color: #fff;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 820px) {
+  .Header {
+    .logo {
+      @include size(60%, 100%);
+    }
+    .navigation {
+      width: 40%;
+      display: flex;
+      justify-content: right;
+      .icon_con {
+      }
+      .navigationItem {
+        display: none;
+      }
+    }
+  }
+}

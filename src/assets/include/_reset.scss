@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+$main_color: #3b5e77;
+$main_color_hover: #00a2ae;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+}
+.wfull {
+  width: 100%;
+  height: 100%;
+}
