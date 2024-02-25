@@ -1,4 +1,3 @@
-import React from "react";
 import schedule from "../../data/schedule";
 export default function Schedule() {
   return (

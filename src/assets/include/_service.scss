@@ -1,0 +1,27 @@
+.service-container {
+  @include size(100%, auto);
+  padding: 50px 0;
+  .service {
+    @include grid(4, 25%, 1, 117px);
+    .service__child {
+      padding: 30px 50px 30px 0;
+      .service_icon svg {
+        @include size(50px, 50px);
+        color: #0099b0;
+      }
+      .service__caption {
+        .service__title {
+          margin: 15px 0;
+          color: #222;
+          font: 20px $openSans;
+        }
+        span {
+          color: #787878;
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

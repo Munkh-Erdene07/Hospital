@@ -1,11 +1,16 @@
 .time-table {
-  display: grid;
-  grid-template-columns: repeat(3, 33.33%);
-  grid-template-rows: repeat(1, 238px);
+  @include grid(3, 33.3%, 1, 238px);
+
+  // margin-top: -80px;
+  // z-index: 10;
+  // position: relative;
   .time__child {
     padding: 40px;
     color: #fff;
     font-size: 22px;
+    .time_title {
+      font-family: $openSans;
+    }
     &:first-child {
       //   background: #00b0bd;
       background: #07694d;
@@ -13,7 +18,7 @@
       flex-direction: column;
       justify-content: space-between;
       .replyBtn {
-        @include size(85%, 44px);
+        @include size(263px, 44px);
         border: 1px solid #fff;
         @include centerlize(left);
         padding: 0 20px;
@@ -48,10 +53,17 @@
     }
   }
 }
-@media (max-width: 766px) {
+@media (max-width: 762px) {
   .time-table {
-    grid-template-columns: repeat(1, 90%);
-    grid-template-rows: repeat(3, 238px);
+    @include gridRes(1, 90%, 3, auto);
     justify-content: center;
+    .time__child {
+      &:first-child {
+        height: 210px;
+      }
+      &:nth-child(2) {
+        height: 150px;
+      }
+    }
   }
 }

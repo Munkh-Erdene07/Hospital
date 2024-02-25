@@ -13,3 +13,12 @@
   justify-content: $value;
   align-items: center;
 }
+@mixin grid($col, $value, $row, $value1) {
+  display: grid;
+  grid-template-columns: repeat($col, $value);
+  grid-template-rows: repeat($row, $value1);
+}
+@mixin gridRes($col, $value, $row, $value1) {
+  grid-template-columns: repeat($col, $value);
+  grid-template-rows: repeat($row, $value1);
+}

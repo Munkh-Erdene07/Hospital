@@ -13,7 +13,7 @@ section.caruosel {
         padding: 0 15px;
         z-index: 9;
         .caruoselBtn {
-          color: #0099b0;
+          color: $main_color1;
           border-radius: 8px;
           @include size(40px, 40px);
           background: rgba(255, 255, 255, 0.7);

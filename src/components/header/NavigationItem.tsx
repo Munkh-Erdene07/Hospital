@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import navigationDetail from "../../data/Navigation";
 import NavigationItemDetail from "./NavigationItemDetail";

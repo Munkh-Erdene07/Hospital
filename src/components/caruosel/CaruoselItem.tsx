@@ -5,6 +5,16 @@ import Icon from "../utils/Icons";
 export default function CaruoselItem() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const icon = Icon();
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === CaruoselData.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 5000);
+    return () => clearInterval(intervalId);
+  }, [currentSlide]);
+
   const handlePrevSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? CaruoselData.length - 1 : prevSlide - 1

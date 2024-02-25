@@ -1,4 +1,3 @@
-import React from "react";
 import NavigationItem from "./NavigationItem";
 import IconItem from "./IconItem";
 import Icon from "../utils/Icons";
