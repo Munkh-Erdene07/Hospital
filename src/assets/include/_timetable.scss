@@ -1,0 +1,57 @@
+.time-table {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(1, 238px);
+  .time__child {
+    padding: 40px;
+    color: #fff;
+    font-size: 22px;
+    &:first-child {
+      //   background: #00b0bd;
+      background: #07694d;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .replyBtn {
+        @include size(85%, 44px);
+        border: 1px solid #fff;
+        @include centerlize(left);
+        padding: 0 20px;
+        &:hover {
+          background: #fff;
+          a {
+            color: #0099b0;
+          }
+        }
+        a {
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      //   background: #24b7c2;
+      background: #098663;
+    }
+    &:last-child {
+      //   background: rgb(40, 211, 223);
+      background: #0c9c74;
+      .schedule {
+        font-size: 14px;
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 13px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 766px) {
+  .time-table {
+    grid-template-columns: repeat(1, 90%);
+    grid-template-rows: repeat(3, 238px);
+    justify-content: center;
+  }
+}

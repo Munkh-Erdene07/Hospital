@@ -13,7 +13,19 @@ $main_color_hover: #00a2ae;
     border: 0;
   }
 }
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 .wfull {
   width: 100%;
   height: 100%;
+}
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+.hover {
+  cursor: pointer;
+  transition: all 0.3s;
 }
