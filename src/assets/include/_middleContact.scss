@@ -1,0 +1,41 @@
+.middle--contact {
+  @include size(100%, auto);
+  padding-bottom: 90px;
+  background: #fcfcfc;
+  .middle__contact__container {
+    @include grid(3, 33%, 1, 143px);
+    .middle_contact_data {
+      padding: 30px 30px 30px 0;
+      display: flex;
+      .middle_contact_icon svg {
+        color: $main_color_hover;
+        // color: #098663;
+        @include size(22px, 22px);
+      }
+      .middle_contact_content {
+        margin-left: 30px;
+        .middle_contact_title {
+          margin-bottom: 15px;
+          color: #a9a9a9;
+        }
+        .middle_contact_caption a,
+        .middle_contact_caption .prapl {
+          color: #2a2d32;
+          line-height: 29px;
+        }
+
+        .middle_contact_caption a,
+        .middle_contact_caption span,
+        .middle_contact_title {
+          font: 14px $openSans;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .middle--contact .middle__contact__container {
+    @include grid(1, 90%, 3, auto);
+    justify-content: center;
+  }
+}
