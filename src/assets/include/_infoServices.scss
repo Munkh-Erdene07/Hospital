@@ -1,0 +1,113 @@
+.info-services {
+  @include size(100%, auto);
+  background: #f2f2f2;
+  padding: 60px 0;
+
+  .info-caption {
+    padding: 0 0 30px 0;
+    letter-spacing: 0.48px;
+    text-align: center;
+    font-size: 30px;
+    color: #009194;
+  }
+  .info-btn {
+    @include size(100%, auto);
+    margin-top: 30px;
+    @include centerlize(center);
+    a {
+      background: #009194;
+      border-radius: 5px;
+      @include size(175px, 40px);
+      @include centerlize(center);
+      color: #fff;
+    }
+  }
+  .info-services-parrent {
+    @include grid(3, 370px, 1, 290px);
+    justify-content: space-between;
+    .info-services-child {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+      .info-services-img {
+        @include size(100%, 70%);
+        cursor: pointer;
+        position: relative;
+        .lesson {
+          position: absolute;
+          @include size(144px, 27px);
+          top: 10px;
+          right: 20px;
+          border-radius: 30px;
+          background: #009194;
+          color: #fff;
+          @include centerlize(center);
+          text-align: center;
+          z-index: 10;
+        }
+        .opacity {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.05);
+          z-index: 9;
+          transition: all 0.3s;
+        }
+        transition: all 0.3s;
+        &:hover {
+          .opacity {
+            background: transparent;
+          }
+        }
+        .opacity,
+        img {
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+        img {
+          object-fit: cover;
+        }
+      }
+      .info-services-content {
+        @include size(100%, 30%);
+        padding: 10px 20px 10px 20px;
+        // padding: 20px 20px 0 20px;
+        p {
+          color: #009194;
+          font-weight: 400;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1128px) {
+  .info-services {
+    .info-services-parrent {
+      @include centerlize(center);
+      @include grid(2, 45%, 2, 330px);
+      gap: 30px;
+      .info-services-child {
+        .info-services-img {
+          @include size(100%, 77%);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .info-services {
+    .info-services-parrent {
+      @include centerlize(center);
+      @include grid(1, 89%, 2, 330px);
+      gap: 30px;
+      .info-services-child {
+        .info-services-img {
+          @include size(100%, 80%);
+        }
+        .info-services-content {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
